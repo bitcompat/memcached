@@ -1,0 +1,22 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_memcached:
+    uses: bitcompat/base/.github/workflows/build.yaml@main
+    with:
+      name: main
+      build-args: |
+        MEMCACHED_VERSION=1.6.17
+      image_tag: |
+        latest
+        1.6.17-bullseye-r1 # renovate: datasource=github-tags depName=memcached/memcached
+        1.6.17-bullseye # renovate: datasource=github-tags depName=memcached/memcached
+        1.6.17 # renovate: datasource=github-tags depName=memcached/memcached
+        1.6
+        1
+    secrets: inherit
