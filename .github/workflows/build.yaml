@@ -11,12 +11,12 @@ jobs:
     with:
       name: main
       build-args: |
-        MEMCACHED_VERSION=1.6.17
+        MEMCACHED_VERSION=1.6.18
       image_tag: |
         latest
-        1.6.17-bullseye-r1 # renovate: datasource=github-tags depName=memcached/memcached
-        1.6.17-bullseye # renovate: datasource=github-tags depName=memcached/memcached
-        1.6.17 # renovate: datasource=github-tags depName=memcached/memcached
+        1.6.18-bullseye-r1 # renovate: datasource=github-tags depName=memcached/memcached
+        1.6.18-bullseye # renovate: datasource=github-tags depName=memcached/memcached
+        1.6.18 # renovate: datasource=github-tags depName=memcached/memcached
         1.6
         1
     secrets: inherit
