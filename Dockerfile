@@ -7,7 +7,7 @@ FROM docker.io/bitnami/minideb:bullseye as builder
 COPY prebuildfs /
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-COPY --link --from=ghcr.io/bitcompat/gosu:1.14.0-bullseye-r1 /opt/bitnami/ /opt/bitnami/
+COPY --link --from=ghcr.io/bitcompat/gosu:1.16.0-bullseye-r1 /opt/bitnami/ /opt/bitnami/
 
 RUN install_packages acl ca-certificates curl gzip libc6 libevent-2.1-7 libsasl2-2 libsasl2-modules procps sasl2-bin tar \
   dpkg-dev gcc libc6-dev libevent-dev libio-socket-ssl-perl libsasl2-dev libssl-dev make perl
