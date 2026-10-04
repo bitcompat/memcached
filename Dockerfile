@@ -1,6 +1,7 @@
 # syntax=docker/dockerfile:1.27
 
-ARG MEMCACHED_VERSION
+ARG BUILD_VERSION
+ARG MEMCACHED_VERSION=${BUILD_VERSION}
 
 FROM docker.io/bitnami/minideb:bullseye as builder
 
