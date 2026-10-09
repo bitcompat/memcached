@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.27
+# syntax=docker/dockerfile:1.28
 
 ARG BUILD_VERSION
 ARG MEMCACHED_VERSION=${BUILD_VERSION}
